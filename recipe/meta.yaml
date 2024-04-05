@@ -19,14 +19,14 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.8
   run:
-    - boto3 >=1.2.1
-    - jmespath >=0.7.1,<1.0.0
-    - python
-    - python-dateutil >=2.4.0
+    - boto3 >=1.34.75
+    - jmespath >=1.0.1
+    - python >=3.8
+    - python-dateutil >=2.9.0
     - setuptools
-    - termcolor >=1.1.0
+    - termcolor >=2.4.0
 
 test:
   imports:
