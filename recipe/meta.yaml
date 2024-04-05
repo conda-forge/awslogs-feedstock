@@ -25,7 +25,6 @@ requirements:
     - jmespath >=1.0.1
     - python >=3.8
     - python-dateutil >=2.9.0
-    - setuptools
     - termcolor >=2.4.0
 
 test:
