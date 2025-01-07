@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 19f223bb1c0703cea0689d94b1d293006529095e6ab8971f6b52289a2e545dd5
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - awslogs = awslogs.bin:main
@@ -19,15 +19,17 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - boto3 >=1.34.75
     - jmespath >=1.0.1
-    - python >=3.8
+    - python >={{ python_min }}
     - python-dateutil >=2.9.0
     - termcolor >=2.4.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - awslogs
   commands:
