@@ -18,7 +18,6 @@ build:
 
 requirements:
   host:
-    - pip
     - python {{ python_min }}
   run:
     - boto3 >=1.34.75
